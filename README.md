@@ -8,8 +8,9 @@
 > **Note to Instructor/TA:** As approved, the implementation for both tasks is combined into a single integrated system. However, this documentation is clearly separated into Task 1 and Task 2 for grading purposes.
 
 ## 👥 Team Members
-* **[你的名字]** (ID: [你的学号]) - Project Lead, System Architecture, Dijkstra Algorithm
-* **[组员名字]** (ID: [组员学号]) - OOP Design, GUI Implementation, Sensor Logic
+* **LIN Zhi Hong** (ID: 13771888)
+* **[组员名字]** (ID: [组员学号])
+* **[组员名字]** (ID: [组员学号])
 *(Note: Detailed declaration of contribution will be attached in the final PDF reports.)*
 
 ## 📅 Project Timeline (Updates)
@@ -62,4 +63,5 @@ The `NetworkManager` class utilizes a Priority Queue (`heapq`) to execute Dijkst
  ┣ 📜 main.py             # Top-level environment and Tkinter GUI
  ┣ 📜 network_manager.py  # Graph data structure & Dijkstra's algorithm
  ┣ 📜 sensor_node.py      # OOP modeling, ADTs, and sensor logic
+
  ┗ 📜 README.md           # Documentation
