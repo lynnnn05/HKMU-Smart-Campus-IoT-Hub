@@ -3,82 +3,82 @@ import heapq
 class NetworkManager:
     def __init__(self, region_name):
         self.region_name = region_name
-        # 数据结构 (Data Structure)：图 (Graph)
-        # 使用邻接表 (Adjacency List) 的形式存储网络拓扑
-        # 格式: { 'Node_A': {'Node_B': latency1, 'Node_C': latency2}, ... }
+        # Data Structure: Graph
+        # Use Adjacency List to store network topology
+        # Format: { 'Node_A': {'Node_B': latency1, 'Node_C': latency2}, ... }
         self.network_graph = {}
         
-        # 结合 Task 1 的 OOP 概念：用一个列表专门管理注册到网络中的传感器对象
+        # Combining OOP concepts from Task 1: Use a list to specifically manage sensor objects registered to the network
         self.registered_sensors = [] 
 
     def register_device(self, sensor_obj):
-        """将 Task 1 中创建的传感器对象注册到网络中"""
+        """Register the sensor object created in Task 1 to the network"""
         if sensor_obj not in self.registered_sensors:
             self.registered_sensors.append(sensor_obj)
             print(f"Success: {sensor_obj.sensor_id} is now registered to {self.region_name} Network.")
 
     def add_node(self, node_id):
-        """在图中添加一个网络节点（比如路由器、基站或中央服务器）"""
+        """Add a network node to the graph (e.g., router, base station, or central server)"""
         if node_id not in self.network_graph:
             self.network_graph[node_id] = {}
 
     def add_connection(self, node1, node2, latency):
         """
-        在图中添加一条无向边 (Undirected Edge)
-        代表两个节点之间的通信链路，latency 代表延迟（权重）
+        Add an undirected edge to the graph
+        Represents the communication link between two nodes, where latency represents the weight
         """
         self.add_node(node1)
         self.add_node(node2)
-        # 双向连接
+        # Bidirectional connection
         self.network_graph[node1][node2] = latency
         self.network_graph[node2][node1] = latency
 
     def find_optimal_route(self, start_node, target_node):
         """
-        算法 (Algorithm)：Dijkstra 最短路径算法
-        用于在复杂的嵌入式网络中，寻找数据包从起点到终点的最低延迟路由。
+        Algorithm: Dijkstra's Shortest Path Algorithm
+        Used to find the lowest latency route for data packets from start to target in complex embedded networks.
         """
-        # 初始化所有节点的距离为无穷大
+        # Initialize distances of all nodes to infinity
         distances = {node: float('inf') for node in self.network_graph}
         distances[start_node] = 0
         
-        # 记录路径，方便最后打印出具体的路由节点
+        # Record the path to easily print out specific route nodes at the end
         previous_nodes = {node: None for node in self.network_graph}
         
-        # 优先队列 (Priority Queue)，存储 (当前总延迟, 节点名)
+        # Priority Queue, storing (current_total_latency, node_name)
         pq = [(0, start_node)]
 
         while pq:
-            # 弹出当前延迟最小的节点
+            # Pop the node with the minimum current latency
             current_distance, current_node = heapq.heappop(pq)
 
-            # 如果找到了目标节点，可以提前结束
+            # If the target node is found, terminate early
             if current_node == target_node:
                 break
 
-            # 如果弹出的节点距离大于已记录的最短距离，说明是冗余数据，跳过
+            # If the popped node's distance is greater than the recorded shortest distance, it's redundant data, skip
             if current_distance > distances[current_node]:
                 continue
 
-            # 遍历当前节点的所有邻居
+            # Iterate through all neighbors of the current node
             for neighbor, weight in self.network_graph[current_node].items():
                 distance = current_distance + weight
 
-                # 如果发现更短的路径，则更新距离并将其推入优先队列
+                # If a shorter path is found, update the distance and push it into the priority queue
                 if distance < distances[neighbor]:
                     distances[neighbor] = distance
                     previous_nodes[neighbor] = current_node
                     heapq.heappush(pq, (distance, neighbor))
 
-        # 回溯构建最短路径
+        # Backtrack to construct the shortest path
         path = []
         curr = target_node
         while curr is not None:
             path.append(curr)
             curr = previous_nodes[curr]
-        path.reverse() # 因为是反向回溯的，所以要反转一下列表
+        path.reverse() # Reverse the list since it was backtracked in reverse order
 
-        # 如果起点和终点没有连通
+        # If start and target nodes are not connected
         if distances[target_node] == float('inf'):
             return None, float('inf')
 
