@@ -79,7 +79,6 @@ To mirror real-world hospital challenges, the system includes a stochastic event
 
 ![Task 1 Demo](Task1/docs/screenshot.png) *(Please upload your Task 1 GUI screenshot here)*
 
----
 
 ### 📂 Task1 Structure
 
@@ -89,6 +88,8 @@ To mirror real-world hospital challenges, the system includes a stochastic event
 * `server.py`: The **Backend Registry** managing doctor objects and global stats.
 * `ui.py`: The **View Layer** handling the Tkinter GUI and event orchestration.
 * `main.py`: The **Bootloader** that initializes the system.
+
+---
 
 <a id="task-2-smart-ambulance-navigator-self-study-algorithm"></a>
 ## 🚑 Task 2: Smart Ambulance Navigator (Self-Study)
