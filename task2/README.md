@@ -31,7 +31,7 @@ An integrated software solution designed to modernize public healthcare logistic
 ## 📂 Repository Structure
 
 ```text
-📦 HK-Smart-Healthcare
+📦 COMP 2090SEF Project
  ┣ 📂 Task1/              
  ┃ ┣ 📜 main.py           
  ┃ ┣ 📜 interfaces.py        
