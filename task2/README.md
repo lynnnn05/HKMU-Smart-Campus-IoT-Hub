@@ -121,17 +121,16 @@ When dispatching ambulances to hospitals, standard linear data structures cannot
 **1. Prerequisites**
 * Python 3.x
 * `Tkinter` (Standard Python GUI library, usually pre-installed)
+* VScode or other python compilers
 
 **2. Launch Task 1 (Hospital Triage System)**
 ```bash
-cd Task1
 python main.py
 ```
 *(Usage: Register patients using the UI and observe the multi-tier priority sorting and stochastic no-show events in the event log.)*
 
 **3. Launch Task 2 (Ambulance Navigator)**
 ```bash
-cd Task2
 python app_gui.py
 ```
 *(Usage: Click the dispatch button to visualize Dijkstra's algorithm actively routing the ambulance around high-weight traffic traps to find the global optimum.)*
