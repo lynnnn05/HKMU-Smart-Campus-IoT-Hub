@@ -42,6 +42,8 @@ An integrated software solution designed to modernize public healthcare logistic
  ┣ 📂 Task2/              
  ┃ ┣ 📜 navigator_logic.py
  ┃ ┗ 📜 app_gui.py
+ ┃ ┗ 📷 output.png
+ ┗ 📷 demo_cover.png
  ┗ 📜 README.md           
 ```
 
@@ -123,7 +125,7 @@ When dispatching ambulances to hospitals, standard linear data structures cannot
 | **Time Complexity** | **O(V²)** | **O(E log V)** |
 | **Space Complexity** | **O(V + E)** | **O(V + E)** |
 
-![Task 2 Demo](Task2/screenshot.png) 
+![Task 2 Demo](Task2/output.png) 
 
 ---
 <a id="quick-start--user-guide"></a>
