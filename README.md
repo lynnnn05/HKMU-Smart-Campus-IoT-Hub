@@ -123,7 +123,7 @@ When dispatching ambulances to hospitals, standard linear data structures cannot
 | **Time Complexity** | **O(V²)** | **O(E log V)** |
 | **Space Complexity** | **O(V + E)** | **O(V + E)** |
 
-![Task 2 Demo](Task2/docs/screenshot.png) *(Please upload your Task 2 GUI screenshot here)*
+![Task 2 Demo](Task2/screenshot.png) 
 
 ---
 <a id="quick-start--user-guide"></a>
