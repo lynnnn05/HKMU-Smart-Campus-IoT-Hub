@@ -96,6 +96,10 @@ To mirror real-world hospital challenges, the system includes a stochastic event
 
 **Objective:** To self-study and implement an advanced Data Structure and Algorithm (strictly beyond the lecture syllabus) to solve a real-world routing problem.
 
+### 🎬 Introduction Video
+Welcome to the **HK Smart Ambulance Navigator**. Watch our 5-minute project demonstration and algorithm walkthrough below:
+
+
 ### 📌 Problem Definition
 When dispatching ambulances to hospitals, standard linear data structures cannot model a complex, congested city grid. This task builds a dynamic routing engine capable of navigating around traffic bottlenecks.
 
