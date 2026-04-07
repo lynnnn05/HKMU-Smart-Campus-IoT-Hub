@@ -97,7 +97,13 @@ To mirror real-world hospital challenges, the system includes a stochastic event
 **Objective:** To self-study and implement an advanced Data Structure and Algorithm (strictly beyond the lecture syllabus) to solve a real-world routing problem.
 
 ### 🎬 Introduction Video
-Welcome to the **HK Smart Ambulance Navigator**. Watch our 5-minute project demonstration and algorithm walkthrough below:
+Welcome to the **HK Smart Ambulance Navigator**. Click the image below to watch our 5-minute project demonstration and algorithm walkthrough:
+
+<div align="center">
+  <a href="https://youtu.be/5L2XIRg7pQA" target="_blank">
+    <img src="https://img.youtube.com/vi/5L2XIRg7pQA/maxresdefault.jpg" alt="HK Ambulance Navigator Demo Video" width="800">
+  </a>
+</div>
 
 
 ### 📌 Problem Definition
