@@ -24,7 +24,7 @@ An integrated software solution designed to modernize public healthcare logistic
 | Name | Student ID |
 | :--- | :--- |
 | **LIN Zhihong** | `[13771888]` |
-| **LIN Yuhao** | `[Member 2 ID]` |
+| **LIN Yuhao** | `[13721930]` |
 | **CHEN Yijun** | `[13619610]` |
 
 ---
